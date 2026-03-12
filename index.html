@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Conocerte un poco más</title>
+
+<style>
+
+body{
+background:linear-gradient(135deg,#141e30,#243b55);
+font-family:Arial;
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+height:100vh;
+text-align:center;
+}
+
+#caja{
+background:rgba(0,0,0,0.6);
+padding:40px;
+border-radius:20px;
+width:420px;
+}
+
+button{
+padding:12px 20px;
+margin:10px;
+border:none;
+border-radius:10px;
+background:#ff6b9a;
+color:white;
+font-size:15px;
+cursor:pointer;
+}
+
+button:hover{
+background:#ff3d7a;
+}
+
+input{
+padding:10px;
+border-radius:10px;
+border:none;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="caja">
+
+<h2 id="texto">
+Si estás viendo esto es porque te di una pequeña nota en la biblioteca.
+
+Solo quería presentarme de una forma diferente. Creo que se nota bastante que no soy muy bueno para expresarme; la verdad, me cuesta mucho. Pero no quería que termine este periodo, o este mes de preparación para el examen de admisión, sin poder hablarte de alguna forma.
+
+Aunque, siendo sincero, esta tampoco es una forma muy directa de hacerlo. Pero al menos es más directo que simplemente darte una nota preguntándote si quieres algo de azúcar.
+
+Y no, no hago esto con la intención de ligar, coquetear o algo parecido. Simplemente me gustaría conocerte un poco más, porque me pareces una alguien muy interesante.
+
+La verdad es que lo he intentado durante estos dos meses, pero no he podido hacerlo, pensé en un montón de formas para poder acercarme un poco y una de ellas fueron pues los papelitos que te dí
+  y creeme que cuando me devolvias un gracias escrito me sentia muy satisfecho con mi intento de acercarme, de hecho tengo uno de esos papelitos que me diste puesta en mi mochila como llavero.
+  como sea, todo eso nos lleva a unas cuantas preguntas y respuestas y la primera es ¿te gustaria conocerme? no te sientas presionada a una respuesta positiva, si es un no yo lo entiendo
+  despues de todo lo ultimo que alguien quiere cuado va a la biblioteca a estudiar es encontrarse con alguien que fastidie su estudio
+</h2>
+
+<div id="opciones">
+
+<button onclick="continuar()">Continuar</button>
+
+</div>
+
+</div>
+
+<script>
+
+function continuar(){
+
+document.getElementById("texto").innerHTML=
+"Podría haberme presentado de otra forma como pedirte tu numero directamente... pero pensé que hacer un pequeño juego sería más divertido o algo mas original y poco comun no creo que alguna vez hayan
+  intentado acercarse a ti de esta forma y si lo hicieron pues mis respetos me quitó absolutamente toda la originalidad.";
+document.getElementById("opciones").innerHTML=`
+
+<button onclick="quien()">Si me gustaria</button>
+<button onclick="porque()">No agg</button>
+<button onclick="porque()">Podria ser</button>
+
+`;
+
+}
+
+function quien(){
+
+document.getElementById("texto").innerHTML=
+"Me llamo ____ y suelo estudiar aquí. Quería conocerte pero pensé que esto sería más interesante.";
+
+document.getElementById("opciones").innerHTML=`
+
+<button onclick="final()">Continuar</button>
+
+`;
+
+}
+
+function porque(){
+
+document.getElementById("texto").innerHTML=
+"Porque hacer un pequeño juego para presentarse me parecía una forma divertida.";
+
+document.getElementById("opciones").innerHTML=`
+
+<button onclick="final()">Continuar</button>
+
+`;
+
+}
+
+function final(){
+
+document.getElementById("texto").innerHTML=
+"Si llegaste hasta aquí, me gustaría saber tu nombre :)";
+
+document.getElementById("opciones").innerHTML=`
+
+<button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLScbYK3G223sNWfHJMhe0tyfXDpt4_WjGXMAUZNL0zgoZTGB1g/viewform?usp=dialog')">
+Responder unas preguntas
+</button>
+
+`;
+
+}
+
+function gracias(){
+
+document.getElementById("texto").innerHTML=
+"Gracias por jugar este pequeño juego. Si algún día quieres hablar conmigo, estaré por la biblioteca.";
+
+document.getElementById("opciones").innerHTML=``;
+
+}
+
+</script>
+
+</body>
+
+</html>
