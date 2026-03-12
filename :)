@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Hola</title>
+
+<style>
+
+body{
+background:linear-gradient(135deg,#1f1c2c,#928dab);
+font-family:Arial;
+color:white;
+text-align:center;
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+#caja{
+background:rgba(0,0,0,0.6);
+padding:40px;
+border-radius:20px;
+width:400px;
+}
+
+button{
+padding:12px 20px;
+margin:10px;
+border:none;
+border-radius:10px;
+background:#ff5c8a;
+color:white;
+font-size:15px;
+cursor:pointer;
+}
+
+button:hover{
+background:#ff2f6d;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="caja">
+
+<h2 id="texto">
+Hola.  
+Si estás viendo esto es porque te di una pequeña nota en la biblioteca.
+
+Solo quería presentarme de una forma diferente. Creo que se nota bastante que no soy muy bueno para expresarme; la verdad, me cuesta mucho. Pero no quería que termine este periodo, o este mes de preparación para el examen de admisión, sin poder hablarte de alguna forma.
+
+Aunque, siendo sincero, esta tampoco es una forma muy directa de hacerlo. Pero al menos es más directo que simplemente darte una nota preguntándote si quieres algo de azúcar.
+
+Y no, no hago esto con la intención de ligar, coquetear o algo parecido. Simplemente me gustaría conocerte un poco más, porque me pareces una persona muy interesante.
+
+La verdad es que lo he intentado durante estos dos meses, desde que te vi por primera vez, pero no he podido hacerlo.
+
+</h2>
+
+<div id="botones">
+
+<button onclick="siguiente1()">Continuar</button>
+
+</div>
+
+</div>
+
+<script>
+
+function siguiente1(){
+
+document.getElementById("texto").innerHTML=
+"Podría haberme presentado normal... pero pensé que esto sería más divertido.";
+
+document.getElementById("botones").innerHTML=`
+
+<button onclick="quien()">¿Quién eres?</button>
+<button onclick="porque()">¿Por qué hiciste esto?</button>
+
+`;
+
+}
+
+function quien(){
+
+document.getElementById("texto").innerHTML=
+"Me llamo ____ y suelo estudiar aquí. Solo quería conocerte.";
+
+document.getElementById("botones").innerHTML=`
+
+<button onclick="final()">Continuar</button>
+
+`;
+
+}
+
+function porque(){
+
+document.getElementById("texto").innerHTML=
+"Porque me pareció una forma divertida y diferente de presentarme.";
+
+document.getElementById("botones").innerHTML=`
+
+<button onclick="final()">Continuar</button>
+
+`;
+
+}
+
+function final(){
+
+document.getElementById("texto").innerHTML=
+"Si te gustaría hablar algún día, puedes decirme tu nombre aquí abajo :)";
+
+document.getElementById("botones").innerHTML=`
+
+<input placeholder="Tu nombre">
+<br><br>
+<button>Enviar</button>
+
+`;
+
+}
+
+</script>
+
+</body>
+
+</html>
+<button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLScbYK3G223sNWfHJMhe0tyfXDpt4_WjGXMAUZNL0zgoZTGB1g/viewform?usp=header')">
+Responder
+</button>
