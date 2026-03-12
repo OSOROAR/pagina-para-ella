@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Un pequeño juego</title>
+
+<style>
+
+body{
+background:linear-gradient(135deg,#141e30,#243b55);
+font-family:Arial;
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+height:100vh;
+text-align:center;
+}
+
+#caja{
+background:rgba(0,0,0,0.6);
+padding:40px;
+border-radius:20px;
+width:420px;
+}
+
+button{
+padding:12px 20px;
+margin:10px;
+border:none;
+border-radius:10px;
+background:#ff6b9a;
+color:white;
+font-size:15px;
+cursor:pointer;
+}
+
+button:hover{
+background:#ff3d7a;
+}
+
+input{
+padding:10px;
+border-radius:10px;
+border:none;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="caja">
+
+<h2 id="texto">
+Hola. Si estás viendo esto es porque te di una nota en la biblioteca.
+</h2>
+
+<div id="opciones">
+
+<button onclick="continuar()">Continuar</button>
+
+</div>
+
+</div>
+
+<script>
+
+function continuar(){
+
+document.getElementById("texto").innerHTML=
+"Podría haberme presentado normal... pero pensé que hacer un pequeño juego sería más divertido.";
+
+document.getElementById("opciones").innerHTML=`
+
+<button onclick="quien()">¿Quién eres?</button>
+<button onclick="porque()">¿Por qué hiciste esto?</button>
+
+`;
+
+}
+
+function quien(){
+
+document.getElementById("texto").innerHTML=
+"Me llamo ____ y suelo estudiar aquí. Quería conocerte pero pensé que esto sería más interesante.";
+
+document.getElementById("opciones").innerHTML=`
+
+<button onclick="final()">Continuar</button>
+
+`;
+
+}
+
+function porque(){
+
+document.getElementById("texto").innerHTML=
+"Porque hacer un pequeño juego para presentarse me parecía una forma divertida.";
+
+document.getElementById("opciones").innerHTML=`
+
+<button onclick="final()">Continuar</button>
+
+`;
+
+}
+
+function final(){
+
+document.getElementById("texto").innerHTML=
+"Si llegaste hasta aquí, me gustaría saber tu nombre :)";
+
+document.getElementById("opciones").innerHTML=`
+
+<input placeholder="Tu nombre">
+<br><br>
+<button onclick="gracias()">Enviar</button>
+
+`;
+
+}
+
+function gracias(){
+
+document.getElementById("texto").innerHTML=
+"Gracias por jugar este pequeño juego. Si algún día quieres hablar conmigo, estaré por la biblioteca.";
+
+document.getElementById("opciones").innerHTML=``;
+
+}
+
+</script>
+
+</body>
+
+</html>
