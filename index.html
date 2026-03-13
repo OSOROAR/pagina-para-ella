@@ -3,7 +3,7 @@
 
 <head>
 
-<title>Un pequeño juego</title>
+<title>Presentacion mia creo</title>
 
 <style>
 
@@ -55,7 +55,15 @@ border:none;
 <div id="caja">
 
 <h2 id="texto">
-Hola. Si estás viendo esto es porque te di una nota en la biblioteca.
+Hola, no quiero quitarte mucho tiempo, así que seré algo breve (creo).
+Si estás leyendo esto es porque pude reunir el “valor” suficiente para darte una nota con el link de esta página.
+
+Sí, yo hice esta página, ya que quería acercarme a ti. Pero en este punto quizá ya te diste cuenta de que soy algo malo para la comunicación directa. De hecho, esta tampoco es una forma muy directa de hablarte.
+
+Pero al menos es un poco más directa que darte una nota preguntándote si quieres algo de azúcar.
+
+Como sea, después de todo esto me gustaría preguntarte si...
+
 </h2>
 
 <div id="opciones">
@@ -71,12 +79,29 @@ Hola. Si estás viendo esto es porque te di una nota en la biblioteca.
 function continuar(){
 
 document.getElementById("texto").innerHTML=
-"Podría haberme presentado normal... pero pensé que hacer un pequeño juego sería más divertido.";
+"Bien para comenzar primero quiero saber si te interesa conocerme, no quiero presionarte a una respuesta positiva asi que si la respuesta es no entonces puedes marcar no ";
 
 document.getElementById("opciones").innerHTML=`
 
 <button onclick="quien()">¿Quién eres?</button>
 <button onclick="porque()">¿Por qué hiciste esto?</button>
+function no(){
+
+document.getElementById("texto").innerHTML=
+"Bueno ya ni modo de todas formas me alivia saber que pude ser mas directo, por cierto tienes unas pestañas muy lindas";
+
+document.getElementById("opciones").innerHTML=`
+
+<img src="https://i.redd.it/rrz7gs33p08b1.jpg" width="150">
+
+<br><br>
+
+<button onclick="continuar()">Volver</button>
+
+`;
+
+}
+
 
 `;
 
